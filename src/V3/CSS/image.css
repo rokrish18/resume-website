@@ -1,0 +1,55 @@
+.mainImageHandle{
+    width: 85%;
+    height: 10vh;
+    border-right: 2px solid #a5a5a5;
+}
+
+.mainImage img{
+    width: 45%;
+    float: right;
+    margin-right: 5%;
+    border: 2px solid #a5a5a5;
+}
+
+.aboutHeader{
+    font-size: 2vw;
+    border: 2px solid #a5a5a5;
+    float: left;
+    width: 40%;
+    padding: 10px;
+    margin-top: 30vh;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+}
+
+.aboutHeaderHandle{
+    width: 10%;
+    height: 40vh;
+    border-right: 2px solid #a5a5a5;
+    position: absolute;
+    top:0;
+    z-index: 0;
+}
+
+.aboutSubHeader{
+    font-size: 1vw;
+    border: 2px solid #a5a5a5;
+    float: right;
+    width: 33%;
+    padding: 10px;
+    margin-top: 51vh;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    left: 12%;
+}
+
+.aboutSubHeaderHandle{
+    width: 30%;
+    height: 62vh;
+    border-right: 2px solid #a5a5a5;
+    position: absolute;
+    top:0;
+    z-index: 0;
+}
