@@ -18,22 +18,46 @@ class Container extends Component {
         this.workDetails = [
             {
                 company: "Cisco Systems",
-                duration: "August 2018 - Present",
-                location: "Chennai",
-                position: "Software Engineer",
-                experience: [
-                    "Developed an intuitive, drag-and-drop type user interface to create logic based, scalable REST APIs and a cataloguing system for the same. I contributed to establishing the Catalogue Publishing process in order to streamline the contributions of various teams across Cisco to DNAC Platform and also worked on optimising the Consumer API Catalogue UI to hold up to hundred thousand records without any performance issues.", 
-                    <br/>,
-                    <br/>,
-                    "Working on an events based messaging system that can notify Network Administrators of various events that occur in a campus network, by using a publisher-subscriber model, RabbitMQ and Java. I developed an easy-to-use and scalable UI for the same using React and Redux. ",
+                items: [
+                    {
+                        duration: "November 2020 - August 2021",
+                        location: "Chennai",
+                        position: "Software Engineer II",
+                        experience: [
+                            `Established a framework for contributions to an API Marketplace in Cisco DNA Center. 
+                            Responsible for publishing, maintenance, and backward compatibility of over 700 artifacts in the API catalogue. 
+                            Worked with various teams across Cisco to manage API registration and documentation for successful delivery through JIRA and Confluence, improved traceability, and ownership of APIs by 80%.`, 
+                            <br/>,
+                            <br/>,
+                            "Conducted technical interviews as part of the Cisco Campus Recruitment team.",
+                        ]
+                    },
+                    {
+                        duration: "August 2018 - Noveember 2020",
+                        location: "Chennai",
+                        position: "Software Engineer",
+                        experience: [
+                            `Developed the UI and implemented features for DNA-Events (multi-channel, event-based notification system) in Cisco DNA- Center Platform using ReactJS, Bootstrap and NodeJS. 
+                            Designed the UX using Invision and implemented the Destinations configuration portal for Cisco DNA Center. 
+                            Optimized the Cisco DNA-Center’s API Consumer Portal to handle the data of 100,000 APIs without performance issues`, 
+                            <br/>,
+                            <br/>,
+                            "Led a team that organized Tech-Talks, Team Games, and new employee on-boarding events.",
+                        ]
+                    }
                 ]
+                
             },
             {
                 company: "Thermo Fisher Scientific",
-                duration: "May 2017 - July 2017",
-                location: "Bangalore",
-                position: "Summer Intern",
-                experience: ["Developed a Single Page Application for the Device Connect Dashboard by developing re-usable UI components and REST APIs to support data operations. Developed a proof-of-concept marking and annotation integration for document viewer. Features included a marking tool with free-form shape editing with multiple layers along with comments and tags, along with REST APIs to preserve marking data to support collaboration among different users."]
+                items: [
+                    {
+                        duration: "May 2017 - July 2017",
+                        location: "Bangalore",
+                        position: "Summer Intern",
+                        experience: ["Developed a Single Page Application for the Device Connect Dashboard by developing re-usable UI components and REST APIs to support data operations. Developed a proof-of-concept marking and annotation integration for document viewer. Features included a marking tool with free-form shape editing with multiple layers along with comments and tags, along with REST APIs to preserve marking data to support collaboration among different users."]
+                    }
+                ]
             }
         ];
 
@@ -208,8 +232,8 @@ class Container extends Component {
                             <Fade right delay={250} duration={500}><h1>Roshan Krishna</h1></Fade>
                             <Fade right delay={350} duration={500}><h4>Software Engineer</h4></Fade>
                             <Fade right delay={450} duration={500}><h4>Web Developer</h4></Fade>
-                            <Fade right delay={550} duration={500}><h2>B.Tech |<br/>Computer Science <br/>& Engineering </h2></Fade>
-                            <Fade right delay={650} duration={500}><h4>NIT Calicut <br/>Class of 2018</h4></Fade>
+                            <Fade right delay={550} duration={500}><h2>Arizona State University<br/>Computer Science <br/></h2></Fade>
+                            <Fade right delay={650} duration={500}><h4>NIT Calicut</h4></Fade>
                         </div>
                         <Fade bottom delay={650} duration={500}>
                             <div className={"aboutSubHeader"}>
@@ -227,16 +251,22 @@ class Container extends Component {
                                             <tr>
                                                 <td>
                                                     <div className={"company"}>{work.company}</div>
-                                                    <div className={"duration"}>{work.duration}</div>
-                                                    <div className={"location"}>{work.location}</div>
-                                                    <div className={"experience"}>
-                                                    <span className={"position"}>{work.position}</span>&nbsp;
                                                     {
-                                                        work.experience.map(ex => {
-                                                            return ex;
+                                                        work.items.map(item => {
+                                                            return <div>
+                                                                <div className={"duration"}>{item.duration}</div>
+                                                                <div className={"location"}>{item.location}</div>
+                                                                <div className={"experience"}>
+                                                                <span className={"position"}>{item.position}</span>&nbsp;
+                                                                {
+                                                                    item.experience.map(ex => {
+                                                                        return ex;
+                                                                    })
+                                                                }
+                                                                </div>
+                                                            </div>
                                                         })
                                                     }
-                                                    </div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -305,7 +335,7 @@ class Container extends Component {
                         links={
                             [
                                 "https://www.linkedin.com/in/rokrish18/",
-                                "https://www.instagram.com/rokrish18/",
+                                "https://www.instagram.com/roshankrishna_",
                                 "https://www.facebook.com/rokrish18",
                                 "https://twitter.com/makro_maniak",
                             ]

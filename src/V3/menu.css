@@ -168,9 +168,8 @@
 .workItem{
     width: 80vw;
     float: right;
-    height: 55%;
-    margin: 2vh 2vw;
-    padding: 3vw;
+    margin: 1vh 2vw;
+    padding: 1vw;
 }
 
 .company{
